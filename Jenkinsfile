@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/USERNAME/myapp.git'
+                git 'https://github.com/mohanbabu66/myapp.git'
             }
         }
 
@@ -17,13 +17,13 @@ pipeline {
 
         stage('Stop Old Container') {
             steps {
-                sh 'docker rm -f mycontainer || true'
+                sh 'docker rm -f vibrant_wilson || true'
             }
         }
 
         stage('Run New Container') {
             steps {
-                sh 'docker run -d --name mycontainer -p 8081:80 mywebsite'
+                sh 'docker run -d --name vibrant_wilson -p 8081:80 mywebsite'
             }
         }
     }
