@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/mohanbabu66/myapp.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t mywebsite .'
